@@ -183,14 +183,16 @@ class ProgramController extends Controller
         $prices = $request->input('price');
 
         // Iterasi melalui data variasi yang ada
-        foreach ($id_variations as $index => $id_variation) {
-            $variation = Variation::find($id_variation);
-            $variation->id_level = $id_levels[$index];
-            $variation->id_room = $id_rooms[$index];
-            $variation->id_time = $id_times[$index]; // Ganti 'id_time' menjadi 'id_room'
-            $variation->capacity = $capacities[$index];
-            $variation->price = $prices[$index];
-            $variation->save();
+        if ($id_variations !== null) {
+            foreach ($id_variations as $index => $id_variation) {
+                $variation = Variation::find($id_variation);
+                $variation->id_level = $id_levels[$index];
+                $variation->id_room = $id_rooms[$index];
+                $variation->id_time = $id_times[$index]; // Ganti 'id_time' menjadi 'id_room'
+                $variation->capacity = $capacities[$index];
+                $variation->price = $prices[$index];
+                $variation->save();
+            }
         }
 
         // Cek apakah ada variasi baru yang ditambahkan
