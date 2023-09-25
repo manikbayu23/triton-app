@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-center py-3">
-                        <a class="btn btn-primary text-center">Konfirmasi</a>
+                        <a class="btn-primary text-center" href="https://wa.me/082146434314" target="blank">Konfirmasi</a>
                     </div>
                 </div>
             </div>

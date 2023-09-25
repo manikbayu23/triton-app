@@ -159,11 +159,11 @@
                             </label>
                             <select name="id_time" id="id_time" class="form-control rounded-4 bg-light" required>
                                 <option value="">Plih Waktu </option>
-                                @foreach ($program->variations as $time)
+                                @foreach ($times as $time)
                                     <option value="{{ $time->id_time }}">
-                                        @if ($time->time->day == 'day1')
+                                        @if ($time->day == 'day1')
                                             Senin & Kamis
-                                        @elseif ($time->time->day == 'day2')
+                                        @elseif ($time->day == 'day2')
                                             Selasa & Jumat
                                         @else
                                             Rabu & Sabtu
@@ -171,7 +171,7 @@
 
                                         <span>/</span>
                                         Pukul:
-                                        @if ($time->time->time == 'time1')
+                                        @if ($time->time == 'time1')
                                             15.00 & 17.00
                                         @else
                                             17.20 & 19.30

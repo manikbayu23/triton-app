@@ -35,11 +35,13 @@ class HomeController extends Controller
     public function show($id)
     {
         $program = Program::with('variations')->find($id);
+        $times = Time::all();
         return view(
             'user.pages.program',
             [
                 "title" => "Program",
                 'program' => $program,
+                'times' => $times
             ]
         );
     }
