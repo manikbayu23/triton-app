@@ -82,6 +82,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/edit-program/{id}', [ProgramController::class, 'edit'])->name('edit');
         Route::post('/update-program/{id}', [ProgramController::class, 'update'])->name('update');
         Route::get('/delete-program/{id}', [ProgramController::class, 'destroy'])->name('destroy');
+        Route::get('/delete-variation/{id}', [ProgramController::class, 'destroy_variation'])->name('destroy-variation');
     });
 
     // variation admin

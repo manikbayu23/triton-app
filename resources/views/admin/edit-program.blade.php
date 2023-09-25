@@ -147,7 +147,11 @@
                                                     class="bg-white border border-gray-300 bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                                                     placeholder="20" required>
                                             </td>
-                                            <td></td>
+                                            <td>
+                                                <a href="{{ route('list_program.destroy-variation', $variation->id_variation) }}"
+                                                    class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"><i
+                                                        class="fa fa-times"></i>Hapus</a>
+                                            </td>
                                         </tr>
                                     @endforeach
                                 </tbody>

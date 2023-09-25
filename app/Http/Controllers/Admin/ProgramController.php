@@ -237,4 +237,12 @@ class ProgramController extends Controller
 
         return redirect()->back()->with('success', 'Program deleted successfully');
     }
+    public function destroy_variation($id)
+    {
+        $variation = Variation::find($id);
+
+        $variation->delete();
+
+        return redirect()->back()->with('success', 'Variation deleted successfully');
+    }
 }
