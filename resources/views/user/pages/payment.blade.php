@@ -43,7 +43,9 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-center py-3">
-                        <a class="btn-primary text-center" href="https://wa.me/082146434314" target="blank">Konfirmasi</a>
+                        <a class="btn btn-primary text-center"
+                            href="https://wa.me/6282146434314?text=Hii%20Triton%20Denpasar..."
+                            target="_blank">Konfirmasi</a>
                     </div>
                 </div>
             </div>

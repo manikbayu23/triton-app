@@ -111,7 +111,6 @@
                             </div>
                         </div>
                     </div>
-                    <span>id bang: {{ $booking->id_variation }}</span>
 
                     @if ($booking->status == 0)
                         <div class="flex justify-center  md:justify-end gap-1">
