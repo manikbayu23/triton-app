@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\SubjectController;
 use App\Http\Controllers\Admin\TeacherController;
 use App\Http\Controllers\Admin\TimeController;
 use App\Http\Controllers\Admin\VariationController;
+use App\Http\Controllers\User\FAQController;
 use App\Models\Variation;
 
 /*
@@ -30,8 +31,10 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/program{id}', [HomeController::class, 'show'])->name('program.show');
 Route::post('/booking', [HomeController::class, 'booking'])->name('booking');
 Route::get('/payment', [HomeController::class, 'payment'])->name('payment');
-Route::get('/tentor/{id}', [HomeController::class, 'tentor'])->name('tentor');
+Route::get('/tentor{id}', [HomeController::class, 'tentor'])->name('tentor');
 Route::get('/vision-mission', [HomeController::class, 'vision'])->name('vision-mission');
+Route::get('/faq', [FAQController::class, 'index'])->name('faq');
+
 
 // Route::get('/', function () {
 //     return view('welcome');

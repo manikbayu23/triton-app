@@ -53,7 +53,7 @@
                             </ul>
                         </div>
 
-                        <a href="faq.html" class="cta">
+                        <a href="{{ route('faq') }}" class="cta">
                             <span>Lihat Semua Pertanyaan</span>
                             <svg viewBox="0 0 13 10" height="10px" width="15px">
                                 <path d="M1,5 L11,5"></path>
