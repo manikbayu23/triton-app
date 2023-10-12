@@ -31,7 +31,7 @@
                             </div>
                             <div class="flex mb-3 p-2 bg-slate-50">
                                 <div class="basis-1/2">Alamat</div>
-                                <div class="basis-1/2">: {{ $booking->phone_number }}</div>
+                                <div class="basis-1/2">: {{ $booking->address }}</div>
                             </div>
                             <div class="flex mb-3 p-2 bg-slate-50">
                                 <div class="basis-1/2">Asal Sekolah</div>

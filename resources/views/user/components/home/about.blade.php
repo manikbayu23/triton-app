@@ -21,10 +21,14 @@
         </div>
 
         <div class="d-flex icon-sosmed gap-3 justify-content-center p-2 mb-4 ">
-            <a href="" class="animate-triton"><i class="fa-brands fa-instagram"></i></a>
-            <a href="" class="animate-triton"><i class="fa-brands fa-facebook"></i></a>
-            <a href="" class="animate-triton"><i class="fa-brands fa-youtube"></i></a>
-            <a href="" class="animate-triton"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/tritondenpasar01/" class="animate-triton" target="_blank"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://web.facebook.com/triton.denpasar" class="animate-triton" target="_blank"><i
+                    class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.youtube.com/TritonDenpasar" class="animate-triton" target="_blank"><i
+                    class="fa-brands fa-youtube"></i></a>
+            <a href="https://wa.me/6282146434314?text=Hii%20Triton%20Denpasar..." class="animate-triton"
+                target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
         <div class="ratio ratio-16x9 mb-5">
             <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video"

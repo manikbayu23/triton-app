@@ -85,6 +85,13 @@
                                     @endif
                                 @endforeach
                             @endif
+                            <li>
+                                <input type="checkbox" checked>
+                                <i></i>
+                                <h2>Untuk petanyaan lain bisa melalui email dan Whatsap kami di bawah ini</h2>
+                                <p><a href="https://wa.me/6282146434314?text=Hii%20Triton%20Denpasar..."
+                                        target="_blank">Whatsapp</a></p>
+                            </li>
                         </ul>
                     </div>
 

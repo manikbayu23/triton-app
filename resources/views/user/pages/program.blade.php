@@ -377,8 +377,8 @@
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
-                width: 5rem;
-                height: 5rem;
+                width: 4rem;
+                height: 4rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
