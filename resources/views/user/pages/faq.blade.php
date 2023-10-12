@@ -18,182 +18,73 @@
 
                     <div id="faq" class="mb-5">
                         <h2 class="text-dark mb-2 p-0 fw-semibold">Pertanyaan Umum</h2>
-
                         <ul>
-                            <li>
-                                <input type="checkbox" checked>
-                                <i></i>
-                                <h2>Apa perbedaan Triton dengan bimbingan belajar
-                                    lainnya ? </h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae debitis
-                                    iusto voluptatum
-                                    doloribus rem, qui nesciunt labore tempore fugit iste deserunt incidunt
-                                    error provident repudiandae
-                                    laudantium quo ipsa unde perspiciatis, nihil autem distinctio! Deserunt,
-                                    aspernatur.</p>
-                            </li>
-                            <li>
-                                <input type="checkbox" checked>
-                                <i></i>
-                                <h2>Apa perbedaan Triton dengan bimbingan belajar
-                                    lainnya ? </h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi,
-                                    quia provident facere
-                                    recusandae itaque assumenda fuga veniam dicta earum dolorem architecto
-                                    facilis nisi pariatur.</p>
-                            </li>
-                            <li>
-                                <input type="checkbox" checked>
-                                <i></i>
-                                <h2>Apa perbedaan Triton dengan bimbingan belajar
-                                    lainnya ? </h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam quas placeat
-                                    assumenda mollitia magni
-                                    consequatur dolorum, quod nihil distinctio aperiam officia alias! Voluptate
-                                    dolore ex officiis sit,
-                                    magnam non a, eligendi pariatur aut, earum dolores tenetur ipsam id illo
-                                    deleniti. Laudantium
-                                    deserunt eaque ipsam voluptatum consequuntur voluptatibus sed minima ad
-                                    accusamus debitis eos
-                                    similique laboriosam, molestiae? Consequatur neque tempore quis. Eligendi,
-                                    in ut aspernatur esse
-                                    nesciunt libero.</p>
-                            </li>
+                            @if ($faqs)
+                                @foreach ($faqs as $faq)
+                                    @if ($faq->category == 'umum')
+                                        <li>
+                                            <input type="checkbox" checked>
+                                            <i></i>
+                                            <h2>{{ $faq->question }}</h2>
+                                            <p>{{ $faq->answer }}</p>
+                                        </li>
+                                    @endif
+                                @endforeach
+                            @endif
                         </ul>
                     </div>
                     <div id="faq" class="mb-5">
                         <h2 class="text-dark mb-2 p-0 fw-semibold">Kelas dan Proses Mengajar</h2>
-
                         <ul>
-                            <li>
-                                <input type="checkbox" checked>
-                                <i></i>
-                                <h2>Apa perbedaan Triton dengan bimbingan belajar
-                                    lainnya ? </h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae debitis
-                                    iusto voluptatum
-                                    doloribus rem, qui nesciunt labore tempore fugit iste deserunt incidunt
-                                    error provident repudiandae
-                                    laudantium quo ipsa unde perspiciatis, nihil autem distinctio! Deserunt,
-                                    aspernatur.</p>
-                            </li>
-                            <li>
-                                <input type="checkbox" checked>
-                                <i></i>
-                                <h2>Apa perbedaan Triton dengan bimbingan belajar
-                                    lainnya ? </h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi,
-                                    quia provident facere
-                                    recusandae itaque assumenda fuga veniam dicta earum dolorem architecto
-                                    facilis nisi pariatur.</p>
-                            </li>
-                            <li>
-                                <input type="checkbox" checked>
-                                <i></i>
-                                <h2>Apa perbedaan Triton dengan bimbingan belajar
-                                    lainnya ? </h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam quas placeat
-                                    assumenda mollitia magni
-                                    consequatur dolorum, quod nihil distinctio aperiam officia alias! Voluptate
-                                    dolore ex officiis sit,
-                                    magnam non a, eligendi pariatur aut, earum dolores tenetur ipsam id illo
-                                    deleniti. Laudantium
-                                    deserunt eaque ipsam voluptatum consequuntur voluptatibus sed minima ad
-                                    accusamus debitis eos
-                                    similique laboriosam, molestiae? Consequatur neque tempore quis. Eligendi,
-                                    in ut aspernatur esse
-                                    nesciunt libero.</p>
-                            </li>
+                            @if ($faqs)
+                                @foreach ($faqs as $faq)
+                                    @if ($faq->category == 'kelas_proses')
+                                        <li>
+                                            <input type="checkbox" checked>
+                                            <i></i>
+                                            <h2>{{ $faq->question }}</h2>
+                                            <p>{{ $faq->answer }}</p>
+                                        </li>
+                                    @endif
+                                @endforeach
+                            @endif
+
                         </ul>
                     </div>
                     <div id="faq" class="mb-5">
                         <h2 class="text-dark mb-2 p-0 fw-semibold">Pendaftaran</h2>
-
                         <ul>
-                            <li>
-                                <input type="checkbox" checked>
-                                <i></i>
-                                <h2>Apa perbedaan Triton dengan bimbingan belajar
-                                    lainnya ? </h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae debitis
-                                    iusto voluptatum
-                                    doloribus rem, qui nesciunt labore tempore fugit iste deserunt incidunt
-                                    error provident repudiandae
-                                    laudantium quo ipsa unde perspiciatis, nihil autem distinctio! Deserunt,
-                                    aspernatur.</p>
-                            </li>
-                            <li>
-                                <input type="checkbox" checked>
-                                <i></i>
-                                <h2>Apa perbedaan Triton dengan bimbingan belajar
-                                    lainnya ? </h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi,
-                                    quia provident facere
-                                    recusandae itaque assumenda fuga veniam dicta earum dolorem architecto
-                                    facilis nisi pariatur.</p>
-                            </li>
-                            <li>
-                                <input type="checkbox" checked>
-                                <i></i>
-                                <h2>Apa perbedaan Triton dengan bimbingan belajar
-                                    lainnya ? </h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam quas placeat
-                                    assumenda mollitia magni
-                                    consequatur dolorum, quod nihil distinctio aperiam officia alias! Voluptate
-                                    dolore ex officiis sit,
-                                    magnam non a, eligendi pariatur aut, earum dolores tenetur ipsam id illo
-                                    deleniti. Laudantium
-                                    deserunt eaque ipsam voluptatum consequuntur voluptatibus sed minima ad
-                                    accusamus debitis eos
-                                    similique laboriosam, molestiae? Consequatur neque tempore quis. Eligendi,
-                                    in ut aspernatur esse
-                                    nesciunt libero.</p>
-                            </li>
+                            @if ($faqs)
+                                @foreach ($faqs as $faq)
+                                    @if ($faq->category == 'pendaftaran')
+                                        <li>
+                                            <input type="checkbox" checked>
+                                            <i></i>
+                                            <h2>{{ $faq->question }}</h2>
+                                            <p>{{ $faq->answer }}</p>
+                                        </li>
+                                    @endif
+                                @endforeach
+                            @endif
+
                         </ul>
                     </div>
                     <div id="faq" class="mb-5">
                         <h2 class="text-dark mb-2 p-0 fw-semibold">Pertanyaan Lain</h2>
 
                         <ul>
-                            <li>
-                                <input type="checkbox" checked>
-                                <i></i>
-                                <h2>Apa perbedaan Triton dengan bimbingan belajar
-                                    lainnya ? </h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae debitis
-                                    iusto voluptatum
-                                    doloribus rem, qui nesciunt labore tempore fugit iste deserunt incidunt
-                                    error provident repudiandae
-                                    laudantium quo ipsa unde perspiciatis, nihil autem distinctio! Deserunt,
-                                    aspernatur.</p>
-                            </li>
-                            <li>
-                                <input type="checkbox" checked>
-                                <i></i>
-                                <h2>Apa perbedaan Triton dengan bimbingan belajar
-                                    lainnya ? </h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi,
-                                    quia provident facere
-                                    recusandae itaque assumenda fuga veniam dicta earum dolorem architecto
-                                    facilis nisi pariatur.</p>
-                            </li>
-                            <li>
-                                <input type="checkbox" checked>
-                                <i></i>
-                                <h2>Apa perbedaan Triton dengan bimbingan belajar
-                                    lainnya ? </h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam quas placeat
-                                    assumenda mollitia magni
-                                    consequatur dolorum, quod nihil distinctio aperiam officia alias! Voluptate
-                                    dolore ex officiis sit,
-                                    magnam non a, eligendi pariatur aut, earum dolores tenetur ipsam id illo
-                                    deleniti. Laudantium
-                                    deserunt eaque ipsam voluptatum consequuntur voluptatibus sed minima ad
-                                    accusamus debitis eos
-                                    similique laboriosam, molestiae? Consequatur neque tempore quis. Eligendi,
-                                    in ut aspernatur esse
-                                    nesciunt libero.</p>
-                            </li>
+                            @if ($faqs)
+                                @foreach ($faqs as $faq)
+                                    @if ($faq->category == 'lainnya')
+                                        <li>
+                                            <input type="checkbox" checked>
+                                            <i></i>
+                                            <h2>{{ $faq->question }}</h2>
+                                            <p>{{ $faq->answer }}</p>
+                                        </li>
+                                    @endif
+                                @endforeach
+                            @endif
                         </ul>
                     </div>
 

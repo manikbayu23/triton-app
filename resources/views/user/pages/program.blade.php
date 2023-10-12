@@ -341,7 +341,20 @@
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="btn-link left">
+        @if ($previous)
+            <a href="{{ route('program.show', $previous->id_programs) }}">
+                <i class="fa-solid fa-chevron-left fa-lg"></i></a>
+        @endif
+    </div>
+
+    <div class="btn-link right">
+        @if ($next)
+            <a href="{{ route('program.show', $next->id_programs) }}">
+                <i class="fa-solid fa-chevron-right fa-lg"></i></a>
+        @endif
     </div>
 
     @push('css')
@@ -356,6 +369,48 @@
 
             #header {
                 display: none;
+            }
+
+            .btn-link {
+                border-radius: 50%;
+                background-color: rgb(211, 4, 4);
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 5rem;
+                height: 5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                text-decoration: none;
+                opacity: 50%;
+                transition: 400ms ease-in-out;
+                cursor: pointer;
+                overflow: hidden;
+            }
+
+            .btn-link:hover {
+                color: #fff;
+                opacity: 80%;
+            }
+
+            .btn-link a {
+                text-decoration: none;
+                color: #fff;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .btn-link.right {
+                right: 20px;
+            }
+
+            .btn-link.left {
+                left: 20px;
             }
         </style>
     @endpush

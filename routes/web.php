@@ -1,18 +1,23 @@
 <?php
 
-use App\Http\Controllers\Admin\BookingController;
+use App\Models\Variation;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\FAQController;
 use App\Http\Controllers\User\HomeController;
-use App\Http\Controllers\Admin\LevelController;
-use App\Http\Controllers\Admin\ProgramController;
 use App\Http\Controllers\Admin\RoomController;
+use App\Http\Controllers\Admin\TimeController;
+use App\Http\Controllers\Admin\LevelController;
+use App\Http\Controllers\Admin\BookingController;
+use App\Http\Controllers\Admin\ProgramController;
 use App\Http\Controllers\Admin\SubjectController;
 use App\Http\Controllers\Admin\TeacherController;
-use App\Http\Controllers\Admin\TimeController;
 use App\Http\Controllers\Admin\VariationController;
-use App\Http\Controllers\User\FAQController;
-use App\Models\Variation;
+use App\Http\Controllers\Admin\TestimonialController;
+use App\Http\Controllers\Admin\FAQController as AdminFAQController;
+use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\User\FAQController as UserFAQController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +38,7 @@ Route::post('/booking', [HomeController::class, 'booking'])->name('booking');
 Route::get('/payment', [HomeController::class, 'payment'])->name('payment');
 Route::get('/tentor{id}', [HomeController::class, 'tentor'])->name('tentor');
 Route::get('/vision-mission', [HomeController::class, 'vision'])->name('vision-mission');
-Route::get('/faq', [FAQController::class, 'index'])->name('faq');
+Route::get('/faq', [UserFAQController::class, 'index'])->name('faq');
 
 
 // Route::get('/', function () {
@@ -46,6 +51,9 @@ Route::get('/dashboard', function () {
 
 
 Route::middleware('auth')->group(function () {
+    Route::get('/register-account', [RegisteredUserController::class, 'create'])->name('create');
+
+
     // bookings admin
     Route::prefix('bookings')->name('booking.')->group(function () {
         Route::get('/', [BookingController::class, 'index'])->name('index');
@@ -106,6 +114,24 @@ Route::middleware('auth')->group(function () {
         Route::get('/edit-teacher/{id}', [TeacherController::class, 'edit'])->name('edit');
         Route::post('/update-teacher/{id}', [TeacherController::class, 'update'])->name('update');
         Route::get('/delete-teacher/{id}', [TeacherController::class, 'destroy'])->name('destroy');
+    });
+
+    Route::prefix('testimonials')->name('testimonial.')->group(function () {
+        Route::get('/', [TestimonialController::class, 'index'])->name('index');
+        Route::get('/create', [TestimonialController::class, 'create'])->name('create');
+        Route::post('/store', [TestimonialController::class, 'store'])->name('store');
+        Route::get('/edit/{id}', [TestimonialController::class, 'edit'])->name('edit');
+        Route::post('/update/{id}', [TestimonialController::class, 'update'])->name('update');
+        Route::get('/delete-testimonial/{id}', [TestimonialController::class, 'destroy'])->name('destroy');
+    });
+
+    Route::prefix('admin-faqs')->name('admin-faq.')->group(function () {
+        Route::get('/', [FAQController::class, 'index'])->name('index');
+        Route::get('/create', [FAQController::class, 'create'])->name('create');
+        Route::post('/store', [FAQController::class, 'store'])->name('store');
+        Route::get('/edit/{id}', [FAQController::class, 'edit'])->name('edit');
+        Route::post('/update/{id}', [FAQController::class, 'update'])->name('update');
+        Route::get('/delete-testimonial/{id}', [FAQController::class, 'destroy'])->name('destroy');
     });
 
     Route::prefix('subjects')->name('subject.')->group(function () {

@@ -12,6 +12,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
 use App\Http\Controllers\Controller;
+use App\Models\Testimoni;
 use App\Models\Time;
 use App\Models\Variation;
 
@@ -21,12 +22,14 @@ class HomeController extends Controller
     {
         $subjects = Subject::all();
         $programs = Program::all();
+        $testimonials = Testimoni::orderBy('id_testimonial', 'asc')->paginate(10);
         return view(
             'user.pages.home',
             [
                 "title" => "Home",
                 'programs' => $programs,
-                'subjects' => $subjects
+                'subjects' => $subjects,
+                'testimonials' => $testimonials
             ]
         );
     }
@@ -36,12 +39,33 @@ class HomeController extends Controller
     {
         $program = Program::with('variations')->find($id);
         $times = Time::all();
+
+        $previous = Program::where('id_programs', '<', $id)->orderBy('id_programs', 'desc')->first();
+        $next = Program::where('id_programs', '>', $id)->orderBy('id_programs')->first();
+
+        // Mencari program dengan ID terbesar dan terkecil
+        $maxIdProgram = Program::max('id_programs');
+        $minIdProgram = Program::min('id_programs');
+
+        // Jika program berikutnya tidak ada, beralih ke program dengan ID terkecil
+        if (!$next) {
+            $next = Program::where('id_programs', $minIdProgram)->first();
+        }
+
+        // Jika program sebelumnya tidak ada, beralih ke program dengan ID terbesar
+        if (!$previous) {
+            $previous = Program::where('id_programs', $maxIdProgram)->first();
+        }
+
+
         return view(
             'user.pages.program',
             [
                 "title" => "Program",
                 'program' => $program,
-                'times' => $times
+                'times' => $times,
+                'previous' => $previous,
+                'next' => $next
             ]
         );
     }

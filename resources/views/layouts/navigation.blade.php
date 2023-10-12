@@ -24,10 +24,10 @@
                     <x-nav-link :href="route('teacher.index')" :active="request()->routeIs('teacher.index')">
                         {{ __('Pengajar') }}
                     </x-nav-link>
-                    <x-nav-link>
+                    <x-nav-link :href="route('testimonial.index')" :active="request()->routeIs('testimonial.index')">
                         {{ __('Testimoni') }}
                     </x-nav-link>
-                    <x-nav-link>
+                    <x-nav-link :href="route('admin-faq.index')" :active="request()->routeIs('admin-faq.index')">
                         {{ __('FAQ') }}
                     </x-nav-link>
                     <div class="hidden sm:flex sm:items-center ">
@@ -89,6 +89,9 @@
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}
                         </x-dropdown-link>
+                        <x-dropdown-link :href="route('create')">
+                            {{ __('Tambah Akun') }}
+                        </x-dropdown-link>
 
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
@@ -135,7 +138,13 @@
             <x-responsive-nav-link :href="route('teacher.index')" :active="request()->routeIs('teacher.index')">
                 {{ __('Pengajar') }}
             </x-responsive-nav-link>
-            <x-dropdown-link :href="route('level.index')" :active="request()->routeIs('level.index')">
+            <x-responsive-nav-link :href="route('teacher.index')" :active="request()->routeIs('teacher.index')">
+                {{ __('Testimonial') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('testimonial.index')" :active="request()->routeIs('testimonial.index')">
+                {{ __('FAQ') }}
+            </x-responsive-nav-link>
+            <x-dropdown-link :href="route('admin-faq.index')" :active="request()->routeIs('admin-faq.index')">
                 {{ __('Level') }}
             </x-dropdown-link>
             <x-responsive-nav-link :href="route('room.index')" :active="request()->routeIs('room.index')">
@@ -159,6 +168,9 @@
             <div class="mt-3 space-y-1">
                 <x-responsive-nav-link :href="route('profile.edit')">
                     {{ __('Profile') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('create')">
+                    {{ __('Tambah Akun') }}
                 </x-responsive-nav-link>
 
                 <!-- Authentication -->
