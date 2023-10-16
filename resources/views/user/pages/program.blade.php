@@ -343,6 +343,8 @@
         </div>
     </div>
 
+    @include('user.components.home.modal-program')
+
     <div class="btn-link left">
         @if ($previous)
             <a href="{{ route('program.show', $previous->id_programs) }}">
@@ -437,6 +439,16 @@
             // Secara default, buka tab pertama kali di load
             document.getElementById("tab1").style.display = "block";
             document.getElementsByClassName("tab-button")[0].classList.add("active");
+
+            let tabButton = $('.tab-button');
+            let btnLink = $('.btn-link');
+            tabButton.on("click", function(e) {
+                if (btnLink.is(":hidden")) {
+                    btnLink.show();
+                } else {
+                    btnLink.hide();
+                }
+            });
 
             $('#id_time').on('change', function(e) {
                 e.preventDefault();

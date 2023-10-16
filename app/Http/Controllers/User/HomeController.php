@@ -57,7 +57,7 @@ class HomeController extends Controller
             $previous = Program::where('id_programs', $maxIdProgram)->first();
         }
 
-
+        $programs = Program::all();
         return view(
             'user.pages.program',
             [
@@ -65,7 +65,8 @@ class HomeController extends Controller
                 'program' => $program,
                 'times' => $times,
                 'previous' => $previous,
-                'next' => $next
+                'next' => $next,
+                'programs' => $programs
             ]
         );
     }

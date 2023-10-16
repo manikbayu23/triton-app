@@ -15,7 +15,7 @@
                             <h2 class="nama-mereka">{{ $testimonial->name }}</h2>
                             <h3 class="sekolah-mereka">{{ $testimonial->school }}</h3>
                             <p>“{{ $testimonial->description }}”</p>
-                            <p><strong>Diterima di {{ $testimonial->accepted }}</strong></p>
+                            <p><strong>{{ $testimonial->accepted }}</strong></p>
                         </div>
                     </div>
                 </div>
