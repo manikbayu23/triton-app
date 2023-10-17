@@ -31,14 +31,16 @@
                 target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
         <div class="ratio ratio-16x9 mb-5">
-            <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video"
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/GpRHZrvqZ_E?si=Czlb1BSZS-K3XsAN"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
         </div>
 
         <div class="mb">
             <h4 class="text-center fw-bold animate-triton mb-3">Brand Book</h4>
             <iframe allowfullscreen="" scrolling="no" class="fp-iframe" style="border: 0px; width: 100%; height: 400px;"
-                src="https://heyzine.com/flip-book/b45577edd3.html"></iframe>
+                src="https://heyzine.com/flip-book/c798a45091.html"></iframe>
         </div>
     </div>
     </div>
