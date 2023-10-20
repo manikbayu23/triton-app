@@ -27,7 +27,7 @@
                     </div>
                     <div class="col-lg-6  col-sm-12 bg-white p-4 rounded-2">
                         <h1 class="fw-bold mb-4 animate-home text-primary-triton">{{ $program->program_name }}</h1>
-                        <p class="mb-4 fw-medium animate-home">{{ $program->description_main }}</p>
+                        <p class="mb-4 fw-medium animate-home">{{ $program->main_description }}</p>
                         <h5 class="fw-bold mb-4 animate-home">
                             Program terbuka untuk kelas :
                         </h5>
